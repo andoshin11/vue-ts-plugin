@@ -2,3 +2,4 @@ node_modules
 lib
 log.txt
 *.log
+.DS_Store
