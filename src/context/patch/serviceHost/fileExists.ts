@@ -1,6 +1,6 @@
 import { PluginContext } from '../../context'
 import { tryPatchMethod } from '../pathcer'
-import { isTSVueFile, toRawVueFileName } from '../../../../../vue-type-audit' // FIXME: use public package
+import { isTSVueFile, toRawVueFileName } from 'vue-type-audit'
 
 export function patchFileExists(context: PluginContext) {
   tryPatchMethod(context.serviceHost, 'fileExists', (delegate = context._ts.sys.fileExists) => {

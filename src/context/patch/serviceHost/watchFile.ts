@@ -1,6 +1,6 @@
 import { PluginContext } from '../../context'
 import { tryPatchMethod } from '../pathcer'
-import { isTSVueFile } from '../../../../../vue-type-audit' // FIXME: use public package
+import { isTSVueFile } from 'vue-type-audit'
 
 export function patchWatchFile(context: PluginContext) {
   tryPatchMethod(context.serviceHost, 'watchFile', delegate => {

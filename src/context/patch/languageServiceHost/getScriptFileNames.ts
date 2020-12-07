@@ -1,6 +1,6 @@
 import { PluginContext } from '../../context'
 import { tryPatchMethod } from '../pathcer'
-import { GLOBAL_TYPES_FILE, isRawVueFile, toTSVueFIleName } from '../../../../../vue-type-audit' // FIXME: use public package
+import { GLOBAL_TYPES_FILE, isRawVueFile, toTSVueFIleName } from 'vue-type-audit'
 
 export function patchGetScriptFileNames(context: PluginContext) {
   tryPatchMethod(context.languageServiceHost, 'getScriptFileNames', delegate => {
