@@ -23,7 +23,7 @@ function getExternalFiles(project: ts.server.ConfiguredProject) {
 }
 
 const moduleFactory: ts.server.PluginModuleFactory = ({ typescript: _ts }) => {
-  return { create: create(_ts), getExternalFiles };
+  return { create: create(_ts) };
 };
 
 export default moduleFactory;

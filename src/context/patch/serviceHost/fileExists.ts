@@ -8,7 +8,7 @@ export function patchFileExists(context: PluginContext) {
 
     return fileName => {
       context.logger(`Checking file exists: ${fileName}`)
-      if (isTSVueFile(fileName)) {
+      if (fileName.endsWith('.vue.ts') && isTSVueFile(fileName)) {
         fileName = toRawVueFileName(fileName)
       }
 
