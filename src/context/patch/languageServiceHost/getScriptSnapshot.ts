@@ -22,7 +22,7 @@ export function patchGetScriptSnapshot(context: PluginContext, scriptVersions: S
 
   tryPatchMethod(context.languageServiceHost, 'getScriptSnapshot', delegate => {
     return function(fileName) {
-      logger(`getting script snapshot: ${fileName}`)
+      // logger(`getting script snapshot: ${fileName}`)
 
       projectService.getOrCreateScriptInfoForNormalizedPath(
         _ts.server.toNormalizedPath(fileName),

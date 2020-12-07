@@ -7,7 +7,7 @@ export function patchWatchFile(context: PluginContext) {
     context.logger(`[patch] Override watchFile to watch virtual files. (ServiceHost)`);
 
     return (fileName, callback, pollingInterval, options) => {
-      context.logger(`Inside watchFile: ${fileName}`)
+      // context.logger(`Inside watchFile: ${fileName}`)
       if (isTSVueFile(fileName)) {
         context.watchVirtualFile(fileName, callback)
 

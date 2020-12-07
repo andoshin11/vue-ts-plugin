@@ -17,13 +17,16 @@ export interface PluginConfig {
 
 function getExternalFiles(project: ts.server.ConfiguredProject) {
   // FIXME
-  const rootDir = path.resolve(process.cwd(), '../../../')
+  console.log('[vue-ts-plugin] vue files')
+  console.log(`__dirname: ${__dirname}`)
+  const rootDir = path.resolve(__dirname, '../../../../')
   const vueFiles = glob.sync(path.resolve(rootDir, './**/*.vue'))
+  console.log(vueFiles)
   return vueFiles
 }
 
 const moduleFactory: ts.server.PluginModuleFactory = ({ typescript: _ts }) => {
-  return { create: create(_ts) };
+  return { create: create(_ts), getExternalFiles };
 };
 
 export default moduleFactory;
