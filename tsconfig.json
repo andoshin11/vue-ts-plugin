@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "declaration": false,
+    "declaration": true,
     "target": "esnext",
-    "sourceMap": false,
+    "sourceMap": true,
+    "skipLibCheck": true,
     "outDir": "lib",
     "strict": true,
     "esModuleInterop": true,
