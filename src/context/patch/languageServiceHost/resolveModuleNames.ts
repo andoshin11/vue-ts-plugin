@@ -64,7 +64,6 @@ export function patchResolveModuleNames(context: PluginContext) {
 
         if (isRawVueFile(name)) {
           const absPath = path.resolve(path.dirname(containingFile), name) as RawVueFileName
-          context.tryCreateScriptInfo(name)
           const resolved: ts.ResolvedModule = {
             resolvedFileName: toTSVueFIleName(absPath)
           }
