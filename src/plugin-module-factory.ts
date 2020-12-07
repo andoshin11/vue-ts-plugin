@@ -1,5 +1,6 @@
 import ts from 'typescript/lib/tsserverlibrary';
 import * as glob from 'glob'
+import path from 'path'
 import { create } from './factory/create'
 
 export interface PluginConfig {
@@ -16,7 +17,8 @@ export interface PluginConfig {
 
 function getExternalFiles(project: ts.server.ConfiguredProject) {
   // FIXME
-  const vueFiles = glob.sync('/Users/shin/dev/vue-type-audit/example/src/**/*.vue')
+  const rootDir = path.resolve(process.cwd(), '../../../')
+  const vueFiles = glob.sync(path.resolve(rootDir, './**/*.vue'))
   return vueFiles
 }
 
