@@ -1,6 +1,6 @@
 {
   "name": "@andoshin11/vue-ts-plugin",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "andoshin11 <shinglish11@gmail.com>",
   "license": "MIT",
   "main": "lib/index.js",
